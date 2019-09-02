@@ -1,21 +1,694 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<body>
+    
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        <!-- Start header -->
+        <header class="site-header header-style3">
+                <!-- navigation -->  
+                <nav class="navigation navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="open-btn">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html"><img src="../assets/images/logo-2.png" alt></a>
+                        </div>
+    
+                        <div id="navbar" class="navbar-collapse collapse navigation-menu-holder navbar-right">
+                            <button class="close-navbar"><i class="fa fa-close"></i></button>
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#">{{ 'sections.home' | transloco}}</a>
+                                    <!-- <ul>
+                                        <li><a href="index.html">Home style 1</a></li>
+                                        <li><a href="index-2.html">Home style 2</a></li>
+                                        <li class="current"><a href="index-3.html">Home style 3</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li>
+                                    <a href="#">Causes</a>
+                                    <!-- <ul>
+                                        <li><a href="causes.html">Causes style 1</a></li>
+                                        <li><a href="causes-s2.html">Causes style 2</a></li>
+                                        <li><a href="causes-list.html">Causes list</a></li>
+                                        <li><a href="cause-single.html">Cause single</a></li>
+                                        <li class="sub-sub-menu"><a href="#">Third level</a>
+                                            <ul>
+                                                <li><a href="#">Third level</a></li>
+                                                <li><a href="#">Third level</a></li>
+                                                <li><a href="#">Third level</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul> -->
+                                </li>
+                                <li>
+                                    <a href="#">Events</a>
+                                    <!-- <ul>
+                                        <li><a href="events.html">Events style 1</a></li>
+                                        <li><a href="event-single.html">Event single</a></li>
+                                    </ul> -->
+                                </li>
+                                <li>
+                                    <a href="#">Shop</a>
+                                    <!-- <ul>
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-left-sidebar.html">Shop left sidebar</a></li>
+                                        <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
+                                        <li><a href="shop-details.html">Shop details</a></li>
+                                    </ul> -->
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                    <!-- <ul>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="blog-details.html">Blog details</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div><!-- end of nav-collapse -->
+    
+    
+                        <div class="search-mini-cart">
+                            <div class="mini-cart-wrapper">
+                                <div class="mini-cart-btn">
+                                    <a href="#">
+                                        <i class="fi flaticon-paper-bag"></i>
+                                        <span class="item-count">21</span>
+                                    </a>
+                                </div>
+                                <ul class="mini-cart">
+                                    <li class="item">
+                                        <div class="product-img">
+                                            <img src="../assets/images/shop/thumb/img-1.jpg" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <h6>Name of the product</h6>
+                                            <p>$255.5</p>
+                                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="product-img">
+                                            <img src="../assets/images/shop/thumb/img-2.jpg" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <h6>Name of the product</h6>
+                                            <p>$155.5</p>
+                                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="minicart-price-total">
+                                        <div class="price-total">
+                                            <span class="label-price-total">Subtotal</span>
+                                            <div class="price-total-w">
+                                                <span>$255.5</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="checkout-btn">
+                                            <a class="btn theme-btn">Proceed to checkout</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- end of container -->
+                </nav> <!-- end navigation -->
+            </header>
+            <!-- end of header -->
+
+        <router-outlet></router-outlet>
+
+        <!-- start of hero -->   
+        <section class="hero hero-slider-wrapper hero-slider-s1">
+            <div class="hero-slider">
+                <div class="slide">
+                    <img src="../assets/images/slider/slide-1.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-xs-12 slide-caption">
+                                <h1>We can’t do it alone without your support</h1>
+                                <p>Help us to eradicate poverty around the world and save the million of lives from unwanted demises. Millions of innocent lives we lost every year for malnutritions.</p>
+                                <a href="#" class="btn theme-btn">Join us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="slide row">
+                    <img src="../assets/images/slider/slide-2.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-xs-12 slide-caption">
+                                <h1>We can’t do it alone without your support</h1>
+                                <p>Help us to eradicate poverty around the world and save the million of lives from unwanted demises. Millions of innocent lives we lost every year for malnutritions.</p>
+                                <a href="#" class="btn theme-btn">Join us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <!-- end of hero slider -->
+
+
+        <!-- start fund-volunteers -->
+        <section class="fund-volunteers">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="box">
+                            <div class="left-part">
+                                <h2><i class="fi flaticon-medical"></i> Volunteers</h2>
+                                <span class="time-to-go">21 more days to go</span>
+                                <a href="#" class="btn theme-btn-s2">Join us <i class="fa fa-angle-right"></i></a>
+                            </div>
+
+                            <div class="right-part">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-s1" data-percent="55"></div>
+                                </div>
+
+                                <div class="goal-joined">
+                                    <div>
+                                        <h3>Joined</h3>
+                                        <span class="amount">12,387</span>
+                                    </div>
+                                    <div>
+                                        <h3>Goal</h3>
+                                        <span class="amount">30,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="box">
+                            <div class="left-part">
+                                <h2><i class="fi flaticon-money-4"></i> Fund</h2>
+                                <span class="time-to-go">21 more days to go</span>
+                                <a href="#" class="btn theme-btn-s2">Join us <i class="fa fa-angle-right"></i></a>
+                            </div>
+
+                            <div class="right-part">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-s1" data-percent="85"></div>
+                                </div>
+
+                                <div class="goal-joined">
+                                    <div>
+                                        <h3>Joined</h3>
+                                        <span class="amount">39,209</span>
+                                    </div>
+                                    <div>
+                                        <h3>Goal</h3>
+                                        <span class="amount">50,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end fund-volunteers -->
+
+
+        <!-- start causes -->
+        <section class="causes section-padding">
+            <div class="container">
+                <div class="row section-title">
+                    <div class="col col-md-8 col-md-offset-2">
+                        <h2>Proyectos</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                </div> <!-- end section-title -->
+        
+                <div class="row content">
+                    <div class="col col-md-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="../assets/images/causes/img-1.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="goal-raised">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-s2 " data-percent="85"></div>
+                                </div>
+
+                                <div class="goal-raised-inner">
+                                    <div class="raised">
+                                        <h4>Raised: <span>$75,328</span></h4>
+                                    </div>
+                                    <div class="goal">
+                                        <h4>Goals: <span>$100,000</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="causes-title">
+                                <h3><a href="#">Make the world green again</a></h3>
+                                <span class="remaining-days"><i class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
+                            </div>
+                            <div class="causes-details">
+                                <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium. </p>
+                                <a href="#" class="btn theme-btn-s3">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="../assets/images/causes/img-2.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="goal-raised">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-s2 " data-percent="85"></div>
+                                </div>
+
+                                <div class="goal-raised-inner">
+                                    <div class="raised">
+                                        <h4>Raised: <span>$75,328</span></h4>
+                                    </div>
+                                    <div class="goal">
+                                        <h4>Goals: <span>$100,000</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="causes-title">
+                                <h3><a href="#">Eradicate the word “Hunger”</a></h3>
+                                <span class="remaining-days"><i class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
+                            </div>
+                            <div class="causes-details">
+                                <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium. </p>
+                                <a href="#" class="btn theme-btn-s3">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="../assets/images/causes/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="goal-raised">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-s2 " data-percent="85"></div>
+                                </div>
+
+                                <div class="goal-raised-inner">
+                                    <div class="raised">
+                                        <h4>Raised: <span>$75,328</span></h4>
+                                    </div>
+                                    <div class="goal">
+                                        <h4>Goals: <span>$100,000</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="causes-title">
+                                <h3><a href="#">Relief distribution in Haiti</a></h3>
+                                <span class="remaining-days"><i class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
+                            </div>
+                            <div class="causes-details">
+                                <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium. </p>
+                                <a href="#" class="btn theme-btn-s3">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end causes -->
+
+        <!-- start recent-blog -->
+        <section class="recent-blog section-padding">
+            <div class="container">
+                <div class="row section-title">
+                    <div class="col col-md-8 col-md-offset-2">
+                        <h2>Recent news</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                </div> <!-- end section-title -->
+        
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="blog-grids recent-blog-slider carousel-dots-with-nav">
+                            <div class="grid col-xs-4">
+                                <div class="entry-media">
+                                    <div class="img-holder">
+                                        <img src="../assets/images/blog/img-3.jpg" alt class="img img-responsive">
+                                    </div>
+                                    <div class="tags">
+                                        <ul>
+                                            <li><a href="#">Non-profit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-title">
+                                        <h3><a href="#">“Clean Central Park 2017” Finished successfully</a></h3>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <ul>
+                                            <li><a href="#">Aaron ramsey</a></li>
+                                            <li><a href="#">19 Feb, 2018</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="continue">
+                                        <a href="#">Continue reading..</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid col-xs-4">
+                                <div class="entry-media">
+                                    <div class="img-holder">
+                                        <img src="../assets/images/blog/img-2.jpg" alt class="img img-responsive">
+                                    </div>
+                                    <div class="tags">
+                                        <ul>
+                                            <li><a href="#">Non-profit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-title">
+                                        <h3><a href="#">10 photos of International Day of Charity</a></h3>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <ul>
+                                            <li><a href="#">Aaron ramsey</a></li>
+                                            <li><a href="#">19 Feb, 2018</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="continue">
+                                        <a href="#">Continue reading..</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid col-xs-4">
+                                <div class="entry-media">
+                                    <div class="img-holder">
+                                        <img src="../assets/images/blog/img-1.jpg" alt class="img img-responsive">
+                                    </div>
+                                    <div class="tags">
+                                        <ul>
+                                            <li><a href="#">Non-profit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-title">
+                                        <h3><a href="#">“Clean Central Park 2017” Finished successfully</a></h3>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <ul>
+                                            <li><a href="#">Aaron ramsey</a></li>
+                                            <li><a href="#">19 Feb, 2018</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="continue">
+                                        <a href="#">Continue reading..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end recent-blog -->
+
+        <!-- start about-company-section -->
+        <section class="about-company-section section-padding">
+            <div class="container">        
+                <div class="row">
+                    <div class="col col-md-7 left-col">
+                        <div class="about-company">
+                            <span>About the company</span>
+                            <h2>Charity World is a simple, replicable and scalable approach with proven success towards humanity.</h2>
+                            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excep teur sint occaecat cupidatat non proident</p>
+                            <a href="#" class="theme-btn-s4">Read more <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-5 right-col">
+
+                        <div class="some-info">
+                                <div class="circle"></div>
+                            <div class="info-box">
+                                <span class="icon">
+                                    <i class="fi flaticon-coins-1"></i>
+                                </span>
+                                <div class="details">
+                                    <h4>2.40 m</h4>
+                                    <span>Donation</span>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <span class="icon">
+                                    <i class="fi flaticon-medical"></i>
+                                </span>
+                                <div class="details">
+                                    <h4>01</h4>
+                                    <span>Purpose</span>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <span class="icon">
+                                    <i class="fi flaticon-people-1"></i>
+                                </span>
+                                <div class="details">
+                                    <h4>12.8 k</h4>
+                                    <span>Volunteers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-company-section -->
+        <!-- start about-us-section 
+        <section class="about-us-section parallax" data-bg-image="../assets/images/about-us-bg.jpg" data-speed="3">
+            <div class="container">
+                <div class="row content">
+                    <div class="col col-md-7 left-col">
+                        <div>
+                            <div class="tab-list">
+                                <ul class="nav">
+                                    <li role="presentation" class="active">
+                                        <a href="#about" data-toggle="tab">About us</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#history" data-toggle="tab">History</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="about">
+                                    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+                                </div>
+                                <div class="tab-pane fade" id="history">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+                                    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end left-col
+
+                    <div class="right-col-bg"></div>
+                    <div class="col col-md-5 right-col">
+                        <div class="about-slider">
+                            <div>
+                                <h3>How we work</h3>
+                                <p>Ut enim ad minima veniam, quis nostrum exercitatio nem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                            </div>
+                            <div>
+                                <h3>How we work</h3>
+                                <p>Ut enim ad minima veniam, quis nostrum exercitatio nem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                            </div>
+                            <div>
+                                <h3>How we work</h3>
+                                <p>Ut enim ad minima veniam, quis nostrum exercitatio nem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                            </div>
+                        </div>
+                    </div> <!-- end right-col
+                </div> <!-- end row
+            </div> <!-- end container 
+        </section>
+        <!-- end about-us-section -->
+
+
+        <!-- start quick-donation-section -->
+        <section class="quick-donation-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-10 col-md-offset-1">
+                        <h2>Quick donation</h2>
+
+                        <div class="donation-form">
+                            <form action="#" class="form">
+                                <div>
+                                    <select class="form-control">
+                                        <option selected disabled> - Select Causes - </option>
+                                        <option>Case 1</option>
+                                        <option>Case 2</option>
+                                        <option>Case 3</option>
+                                        <option>Case 4</option>
+                                    </select>
+                                </div>
+                                <div class="donate-list">
+                                    <div class="box">
+                                        <input type="radio" id="c1" name="c1">
+                                        <label for="c1"><span class="check-icon"></span> <span class="amount">$100</span></label>
+                                    </div>
+                                    <div class="box">
+                                        <input type="radio" id="c2" name="c1">
+                                        <label for="c2"><span class="check-icon"></span> <span class="amount">$200</span></label>
+                                    </div>
+                                    <div class="box active">
+                                        <input type="radio" id="c3" name="c1" checked>
+                                        <label for="c3"><span class="check-icon"></span> <span class="amount">$500</span></label>
+                                    </div>
+                                    <div class="box">
+                                        <input type="radio" id="c4" name="c1">
+                                        <label for="c4"><span class="check-icon"></span> <span class="amount">$1000</span></label>
+                                    </div>
+                                </div>
+
+                                <div class="donate-as-anonymous">
+                                    <input type="checkbox" id="d1">
+                                    <label for="d1"> Donate as anonymous</label>
+                                </div>
+
+                                <div class="donate-btn">
+                                    <button class="btn theme-btn" type="submit">Donate</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end quick-donation-section -->
+
+        <!-- start cta -->
+        <section class="cta parallax" data-bg-image="../assets/images/cta-bg.jpg" data-speed="3">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-8 left-col">
+                        <h3>Subscribe to our newsletter for <span>news</span> and <span>updates</span></h3>
+                    </div>
+                    <div class="col col-md-4">
+                        <form class="form">
+                            <div class="text-fild">
+                                <input type="text" class="form-control" placeholder="email address..">
+                                <button type="submit" class="submit-btn"><i class="fa fa-arrow-right"></i></button>
+                            </div>
+                            <div class="notify-message">
+                                <input type="checkbox" id="notify">
+                                <label for="notify"> Notify me only about the updates</label>
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta -->
+
+
+        <!-- start footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-3 col-sm-6">
+                        <div class="widget about-widget">
+                            <div class="footer-logo">
+                                <img src="../assets/images/footer-logo.png" alt class="img img-responsive">
+                            </div>
+                            <div class="company-info">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore sed do eiusmod.</p>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-md-3 col-sm-6">
+                        <div class="widget donate-widget">
+                            <h3 class="widget-title">Donate</h3>
+                            <ul>
+                                <li><a href="#">Become a Monthly Giver</a></li>
+                                <li><a href="#">Make a Single Donation</a></li>
+                                <li><a href="#">Child Sponsorship</a></li>
+                                <li><a href="#">Leave a Gift in Your Will</a></li>
+                                <li><a href="#">Other Ways to Give</a></li>
+                                <li><a href="#">Online Gift Catalogue</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-md-3 col-sm-6">
+                        <div class="widget action-widget">
+                            <h3 class="widget-title">Take action</h3>
+                            <ul>
+                                <li><a href="#">Who We Are</a></li>
+                                <li><a href="#">Global Reach</a></li>
+                                <li><a href="#">Campaign with Us</a></li>
+                                <li><a href="#">Our History</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-md-3 col-sm-6">
+                        <div class="widget twitter-post-widget">
+                            <h3 class="widget-title">Twitter feed</h3>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter"></i> Themexriver</a>  @envato: One subscription, 5000+ assets &amp; unlimited August 30, 2016 7:49 am
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter"></i> Themexriver</a>  olar bears can eat as many as 86 penguins in a single sitting.July 22, 2016 11:35 am
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end of page-wrapper -->
+
+</body>
+
