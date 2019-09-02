@@ -1,0 +1,12 @@
+{
+  "title": "transloco es",
+  "dynamic": "transloco {{value}}",
+  "sections": {
+    "home": "Inicio",
+    "about": "¿Quiénes somos?",
+    "projects": "Proyectos",
+    "shop": "Tienda",
+    "blog": "Blog",
+    "transparency": "Transparencia"
+  }
+}
