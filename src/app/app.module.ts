@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { translocoLoader } from './transloco.loader';
 import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
+import { AboutComponent } from './components/about/about.component';
+import { ProjectsSummaryComponent } from './components/projects-summary/projects-summary.component';
+import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { TransparencyComponent } from './components/transparency/transparency.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +33,17 @@ import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/tran
     BlogSummaryComponent,
     AboutSummaryComponent,
     QuickDonateComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    AboutComponent,
+    ProjectsSummaryComponent,
+    HomeComponent,
+    ShopComponent,
+    BlogComponent,
+    TransparencyComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslocoModule
