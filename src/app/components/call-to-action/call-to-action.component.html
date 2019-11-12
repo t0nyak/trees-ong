@@ -1,1 +1,33 @@
-<p>call-to-action works!</p>
+<div class="col col-md-6">
+  <div class="box">
+    <div class="left-part">
+      <h2><i class="fi flaticon-medical"></i> {{ CTATitle | transloco }}</h2>
+      <span class="time-to-go"></span>
+      <a href="#" class="btn theme-btn-s2">
+        {{ CTAButton | transloco }} <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+
+    <div class="right-part">
+      <div class="progress">
+        <div
+            #progressBar
+            [style.width.%] ="progressBarPerc"
+          class="progress-bar progress-bar-s1"
+          data-percent="55"
+        ></div>
+      </div>
+
+      <div class="goal-joined">
+        <div>
+          <h3>Total</h3>
+          <span class="amount">12,387</span>
+        </div>
+        <div>
+          <h3>Objetivo</h3>
+          <span class="amount">30,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

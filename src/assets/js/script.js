@@ -510,9 +510,6 @@
         WHEN DOCUMENT LOADING 
     ==========================================================================*/
     $(window).on('load', function() {
-
-        preloader();
-
         toggleMobileNavigation();
 
         sliderBgSetting();

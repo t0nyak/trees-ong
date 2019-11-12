@@ -9,5 +9,15 @@
     "blog": "Blog",
     "transparency": "Transparencia",
     "register": "Registro"
+  },
+  "call-to-action": {
+    "partners": {
+      "title": "Socios",
+      "button": "Únete"
+    },
+    "funds": {
+      "title": "Fondos",
+      "button": "Aporta"
+    }
   }
 }

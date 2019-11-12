@@ -35,58 +35,8 @@
 <section class="fund-volunteers">
     <div class="container">
         <div class="row">
-            <div class="col col-md-6">
-                <div class="box">
-                    <div class="left-part">
-                        <h2><i class="fi flaticon-medical"></i> Volunteers</h2>
-                        <span class="time-to-go">21 more days to go</span>
-                        <a href="#" class="btn theme-btn-s2">Join us <i class="fa fa-angle-right"></i></a>
-                    </div>
-
-                    <div class="right-part">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-s1" data-percent="55"></div>
-                        </div>
-
-                        <div class="goal-joined">
-                            <div>
-                                <h3>Joined</h3>
-                                <span class="amount">12,387</span>
-                            </div>
-                            <div>
-                                <h3>Goal</h3>
-                                <span class="amount">30,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-6">
-                <div class="box">
-                    <div class="left-part">
-                        <h2><i class="fi flaticon-money-4"></i> Fund</h2>
-                        <span class="time-to-go">21 more days to go</span>
-                        <a href="#" class="btn theme-btn-s2">Join us <i class="fa fa-angle-right"></i></a>
-                    </div>
-
-                    <div class="right-part">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-s1" data-percent="85"></div>
-                        </div>
-
-                        <div class="goal-joined">
-                            <div>
-                                <h3>Joined</h3>
-                                <span class="amount">39,209</span>
-                            </div>
-                            <div>
-                                <h3>Goal</h3>
-                                <span class="amount">50,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <app-call-to-action [type]="'socios'"></app-call-to-action>
+            <app-call-to-action [type]="'fondos'"></app-call-to-action>
         </div> <!-- end row -->
     </div> <!-- end container -->
 </section>
@@ -98,7 +48,7 @@
     <div class="container">
         <div class="row section-title">
             <div class="col col-md-8 col-md-offset-2">
-                <h2>Proyectos</h2>
+                <h2>{{ 'sections.projects' | transloco}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
             </div>
         </div> <!-- end section-title -->

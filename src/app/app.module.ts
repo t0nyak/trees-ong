@@ -54,8 +54,7 @@ import { TransparencyComponent } from './components/transparency/transparency.co
         listenToLangChange: false,
         defaultLang: 'es',
         fallbackLang: 'en',
-        prodMode: environment.production,
-        scopeStrategy: 'shared'
+        prodMode: environment.production
       } as TranslocoConfig
     },
     translocoLoader
