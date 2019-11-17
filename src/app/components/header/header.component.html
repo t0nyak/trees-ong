@@ -1,42 +1,56 @@
 <!-- Start header -->
 <header class="site-header header-style3">
-    <!-- navigation -->  
+    <!-- navigation -->
     <nav class="navigation navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="open-btn">
+                <button type="button"
+                        class="open-btn">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="../../../assets/images/logo-2.png" alt></a>
+                <a class="navbar-brand"
+                   href="index.html"><img src="../../../assets/images/elent.png"
+                         alt></a>
             </div>
 
-            <div id="navbar" class="navbar-collapse collapse navigation-menu-holder navbar-right">
+            <div id="navbar"
+                 class="navbar-collapse collapse navigation-menu-holder navbar-right">
                 <button class="close-navbar"><i class="fa fa-close"></i></button>
                 <ul class="nav navbar-nav">
-                    <li><a class="navbar-links" routerLink="/home">{{ 'sections.home' | transloco}}</a></li>
-                    <li><a class="navbar-links" routerLink="/about">{{ 'sections.about' | transloco}}</a></li>
-                    <li><a class="navbar-links" routerLink="/projects">{{ 'sections.projects' | transloco}}</a></li>
-                    <li><a class="navbar-links" routerLink="/shop">{{ 'sections.shop' | transloco}}</a></li>
-                    <li><a class="navbar-links" routerLink="/blog">{{ 'sections.blog' | transloco}}</a></li>
-                    <li><a class="navbar-links" routerLink="/transparency">{{ 'sections.transparency' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/home">{{ 'sections.home' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/about">{{ 'sections.about' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/projects">{{ 'sections.projects' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/shop">{{ 'sections.shop' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/blog">{{ 'sections.blog' | transloco}}</a></li>
+                    <li><a class="navbar-links"
+                           routerLink="/transparency">{{ 'sections.transparency' | transloco}}</a></li>
                     <li><a class="navbar-links"><i class="fi flaticon-avatar"></i></a></li>
                 </ul>
 
                 <div class="search-mini-cart">
                     <div class="mini-cart-wrapper">
-                        <div (click)="toggleCartMenu()" class="mini-cart-btn">
+                        <div (click)="toggleCartMenu()"
+                             class="mini-cart-btn">
                             <a>
                                 <i class="fi flaticon-shopping-bag"></i>
                                 <span class="item-count">21</span>
                             </a>
                         </div>
-                        <ul *ngIf="cartIsOpen" [@openCartMenu]="'open'"  class="mini-cart">
+                        <ul *ngIf="cartIsOpen"
+                            [@openCartMenu]="'open'"
+                            class="mini-cart">
                             <li class="item">
                                 <div class="product-img">
-                                    <img src="../../../assets/images/shop/thumb/img-1.jpg" alt="">
+                                    <img src="../../../assets/images/shop/thumb/img-1.jpg"
+                                         alt="">
                                 </div>
                                 <div class="product-details">
                                     <h6>Name of the product</h6>
@@ -46,7 +60,8 @@
                             </li>
                             <li class="item">
                                 <div class="product-img">
-                                    <img src="../../../assets/images/shop/thumb/img-2.jpg" alt="">
+                                    <img src="../../../assets/images/shop/thumb/img-2.jpg"
+                                         alt="">
                                 </div>
                                 <div class="product-details">
                                     <h6>Name of the product</h6>
@@ -61,7 +76,7 @@
                                         <span>$255.5</span>
                                     </div>
                                 </div>
-            
+
                                 <div class="checkout-btn">
                                     <a class="btn theme-btn">Proceed to checkout</a>
                                 </div>
@@ -72,7 +87,7 @@
             </div><!-- end of nav-collapse -->
 
 
-            
+
         </div><!-- end of container -->
     </nav> <!-- end navigation -->
 </header>
