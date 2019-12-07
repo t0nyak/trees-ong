@@ -1,4 +1,33 @@
+@import "../../../assets/sass/helpers/variables";
+
 .slide {
-    background: url("../../../assets/images/slider/slide-1.jpg") no-repeat center center fixed;
-    background-size: cover;
+  background: url("../../../assets/images/slider/slide-1.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
+@media (min-width: 501px) {
+  .slide-caption .shadow {
+    margin: 0 auto;
+    width: 80%;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 4px;
+    p {
+      color: $theme-primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slide-caption .shadow {
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: $white;
+    padding: 10px;
+    border-radius: 4px;
+    p {
+      color: $theme-primary-color;
+    }
+  }
 }

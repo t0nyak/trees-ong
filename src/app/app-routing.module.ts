@@ -6,6 +6,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { BlogComponent } from "./components/blog/blog.component";
 import { ShopComponent } from "./components/shop/shop.component";
+import { TransparencyComponent } from "./components/transparency/transparency.component";
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: "transparency",
-    component: ProjectsComponent
+    component: TransparencyComponent
   },
   {
     path: "**",
