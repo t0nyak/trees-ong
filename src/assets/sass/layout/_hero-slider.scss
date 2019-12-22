@@ -204,7 +204,7 @@
   }
 
   .slide-caption img {
-    width: 300px;
+    width: 350px;
   }
 
   .active .slide-caption > h1 {
@@ -213,6 +213,10 @@
     -o-animation: slideInSlow 1.5s 0.8s forwards;
     -ms-animation: slideInSlow 1.5s 0.8s forwards;
     animation: slideInSlow 1.5s 0.8s forwards;
+  }
+
+  .slide-caption > h2 {
+    color: white;
   }
 
   .active .slide-caption > p {
