@@ -8,14 +8,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12 slide-caption">
-                        <div class="shadow">
-                            <img src="../../../assets/images/elent.png"
-                                 alt>
-                            <p>Help us to eradicate poverty around the world and save the million of lives from unwanted
-                                demises. Millions of innocent lives we lost every year for malnutritions.</p>
-                            <a href="#"
-                               class="btn theme-btn">Join us</a>
-                        </div>
+
+                        <img src="../../../assets/images/elent2.png"
+                             alt>
+                        <h2>Echando raíces</h2>
+                        <p>¿Tú qué vas a hacer?.</p>
+                        <a href="#"
+                           class="btn theme-btn">Únete</a>
+
                     </div>
                 </div>
             </div>
@@ -62,7 +62,8 @@
         </div> <!-- end section-title -->
 
         <div class="row content">
-            <div class="col col-md-4 col-xs-6">
+            <div *ngFor="let project of projects"
+                 class="col col-md-4 col-xs-6">
                 <div class="grid">
                     <div class="img-holder">
                         <img src="../assets/images/causes/img-1.jpg"
@@ -71,107 +72,34 @@
                     </div>
                     <div class="goal-raised">
                         <div class="progress">
-                            <div class="progress-bar progress-bar-s2 "
-                                 data-percent="85"></div>
+                            <div [style.width.%]="project.percent"
+                                 class="progress-bar progress-bar-s2"></div>
                         </div>
 
                         <div class="goal-raised-inner">
                             <div class="raised">
-                                <h4>Raised: <span>$75,328</span></h4>
+                                <h4>Conseguido: <span>{{ project.raised }} {{project.unit}}</span></h4>
                             </div>
                             <div class="goal">
-                                <h4>Goals: <span>$100,000</span></h4>
+                                <h4>Objetivo: <span>{{ project.goal }} {{project.unit}}</span></h4>
                             </div>
                         </div>
                     </div>
 
                     <div class="causes-title">
-                        <h3><a href="#">Make the world green again</a></h3>
+                        <h3><a href="#">{{ project.title }}</a></h3>
                         <span class="remaining-days"><i
-                               class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
+                               class="fi flaticon-calendar-page-with-circular-clock-symbol"></i>
+                            Límite: {{ project.date }}</span>
                     </div>
                     <div class="causes-details">
-                        <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium.
-                        </p>
+                        <p>{{ project.text | summarize }}</p>
                         <a href="#"
-                           class="btn theme-btn-s3">Donate</a>
+                           class="btn theme-btn-s3">Donar</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col col-md-4 col-xs-6">
-                <div class="grid">
-                    <div class="img-holder">
-                        <img src="../assets/images/causes/img-2.jpg"
-                             alt
-                             class="img img-responsive">
-                    </div>
-                    <div class="goal-raised">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-s2 "
-                                 data-percent="85"></div>
-                        </div>
-
-                        <div class="goal-raised-inner">
-                            <div class="raised">
-                                <h4>Raised: <span>$75,328</span></h4>
-                            </div>
-                            <div class="goal">
-                                <h4>Goals: <span>$100,000</span></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="causes-title">
-                        <h3><a href="#">Eradicate the word “Hunger”</a></h3>
-                        <span class="remaining-days"><i
-                               class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
-                    </div>
-                    <div class="causes-details">
-                        <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium.
-                        </p>
-                        <a href="#"
-                           class="btn theme-btn-s3">Donate</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-md-4 col-xs-6">
-                <div class="grid">
-                    <div class="img-holder">
-                        <img src="../assets/images/causes/img-3.jpg"
-                             alt
-                             class="img img-responsive">
-                    </div>
-                    <div class="goal-raised">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-s2 "
-                                 data-percent="85"></div>
-                        </div>
-
-                        <div class="goal-raised-inner">
-                            <div class="raised">
-                                <h4>Raised: <span>$75,328</span></h4>
-                            </div>
-                            <div class="goal">
-                                <h4>Goals: <span>$100,000</span></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="causes-title">
-                        <h3><a href="#">Relief distribution in Haiti</a></h3>
-                        <span class="remaining-days"><i
-                               class="fi flaticon-calendar-page-with-circular-clock-symbol"></i> 3 days remaining</span>
-                    </div>
-                    <div class="causes-details">
-                        <p>Perspiciatis unde omnis iste natus error sit volupta tem accusantium doloremque laudantium.
-                        </p>
-                        <a href="#"
-                           class="btn theme-btn-s3">Donate</a>
-                    </div>
-                </div>
-            </div>
         </div> <!-- end row -->
     </div> <!-- end container -->
 </section>
@@ -290,13 +218,11 @@
         <div class="row">
             <div class="col col-md-7 left-col">
                 <div class="about-company">
-                    <span>About the company</span>
-                    <h2>Charity World is a simple, replicable and scalable approach with proven success towards
-                        humanity.</h2>
-                    <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excep teur sint
-                        occaecat cupidatat non proident</p>
+                    <span>{{ 'sections.about' | transloco}}</span>
+                    <h2>{{ 'home.about_title' | transloco}}</h2>
+                    <p>{{ 'home.about_text_1' | transloco}}</p>
+                    <p>{{ 'home.about_text_2' | transloco}}</p>
+                    <p>{{ 'home.about_text_3' | transloco}}</p>
                     <a href="#"
                        class="theme-btn-s4">Read more <i class="fa fa-angle-right"></i></a>
                 </div>

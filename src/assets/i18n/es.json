@@ -20,5 +20,11 @@
       "button": "Aporta"
     }
   },
-  "blog": {}
+  "blog": {},
+  "home": {
+    "about_title": "Somos un pequeño grupo de amantes de la naturaleza y la vida en este maravilloso planeta",
+    "about_text_1": "Estamos decididos a aportar nuestro granito de arena para frenar el cambio climático, el calentamiento global y tratar de minimizar la acción del hombre y nuestra civilización en la superficie de nuestro mundo.",
+    "about_text_2": "Desde la base en un principio, simplemente reforestando y limpiando nuestro ecosistema de residuos dañinos para el mismo, y con el plan siempre en mente de ampliar proyectos en un futuro, partimos en este humilde viaje para tratar de salvaguardar un hábitat que a todas luces se nos va muriendo.",
+    "about_text_3": "Ayúdanos con una donación mensual mínima a conseguir un aire limpio para nosotros y nuestros descendientes. Sabes de sobra que puedes permitírtelo y que es necesario que empecemos a cambiar nuestro rumbo YA."
+  }
 }
