@@ -27,6 +27,7 @@ import { ShopComponent } from "./components/shop/shop.component";
 import { BlogComponent } from "./components/blog/blog.component";
 import { TransparencyComponent } from "./components/transparency/transparency.component";
 import { SummarizeTextPipe } from "./pipes/summarize-text.pipe";
+import { ProjectSingleComponent } from "./components/project-single/project-single.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SummarizeTextPipe } from "./pipes/summarize-text.pipe";
     ShopComponent,
     BlogComponent,
     TransparencyComponent,
-    SummarizeTextPipe
+    SummarizeTextPipe,
+    ProjectSingleComponent
   ],
   imports: [
     BrowserModule,

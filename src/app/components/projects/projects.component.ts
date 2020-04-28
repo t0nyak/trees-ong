@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ProjectService } from "src/app/services/project.service";
+import { Project } from "src/app/models/project";
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  selector: "app-projects",
+  templateUrl: "./projects.component.html",
+  styleUrls: ["./projects.component.scss"]
 })
 export class ProjectsComponent implements OnInit {
+  projects: Project[];
 
-  constructor() { }
+  constructor(private projectService: ProjectService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.projects = await this.projectService.getProjects();
+    this.projects.forEach(elem => {
+      elem["percent"] = (elem.raised / elem.goal) * 100;
+    });
   }
-
 }

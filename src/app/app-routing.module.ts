@@ -7,6 +7,7 @@ import { ProjectsComponent } from "./components/projects/projects.component";
 import { BlogComponent } from "./components/blog/blog.component";
 import { ShopComponent } from "./components/shop/shop.component";
 import { TransparencyComponent } from "./components/transparency/transparency.component";
+import { ProjectSingleComponent } from "./components/project-single/project-single.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: "projects",
     component: ProjectsComponent
+  },
+  {
+    path: "projects/:id",
+    component: ProjectSingleComponent
   },
   {
     path: "shop",
