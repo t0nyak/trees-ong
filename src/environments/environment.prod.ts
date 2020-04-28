@@ -1,4 +1,5 @@
 export const environment = {
   baseUrl: "http://www.elent.org",
-  production: true
+  apiUrl: "http://localhost:8118/",
+  production: true,
 };
