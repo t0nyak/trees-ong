@@ -18,7 +18,7 @@ import { translocoLoader } from "./transloco.loader";
 import {
   TranslocoModule,
   TRANSLOCO_CONFIG,
-  TranslocoConfig
+  TranslocoConfig,
 } from "@ngneat/transloco";
 import { AboutComponent } from "./components/about/about.component";
 import { ProjectsSummaryComponent } from "./components/projects-summary/projects-summary.component";
@@ -28,6 +28,7 @@ import { BlogComponent } from "./components/blog/blog.component";
 import { TransparencyComponent } from "./components/transparency/transparency.component";
 import { SummarizeTextPipe } from "./pipes/summarize-text.pipe";
 import { ProjectSingleComponent } from "./components/project-single/project-single.component";
+import { PriceRangeComponent } from "./components/shop/price-range/price-range.component";
 
 @NgModule({
   declarations: [
@@ -47,14 +48,15 @@ import { ProjectSingleComponent } from "./components/project-single/project-sing
     BlogComponent,
     TransparencyComponent,
     SummarizeTextPipe,
-    ProjectSingleComponent
+    ProjectSingleComponent,
+    PriceRangeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    TranslocoModule
+    TranslocoModule,
   ],
   providers: [
     {
@@ -63,12 +65,12 @@ import { ProjectSingleComponent } from "./components/project-single/project-sing
         listenToLangChange: false,
         defaultLang: "es",
         fallbackLang: "en",
-        prodMode: environment.production
-      } as TranslocoConfig
+        prodMode: environment.production,
+      } as TranslocoConfig,
     },
     translocoLoader,
-    SummarizeTextPipe
+    SummarizeTextPipe,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
