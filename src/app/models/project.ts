@@ -1,4 +1,4 @@
-export class Project {
+export interface Project {
   uuid: string;
   goal: number;
   raised: number;

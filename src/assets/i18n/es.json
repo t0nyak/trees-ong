@@ -20,7 +20,9 @@
       "button": "Aporta"
     }
   },
-  "blog": {},
+  "blog": {
+    "keep_reading": "Continuar leyendo..."
+  },
   "home": {
     "about_title": "Somos un pequeño grupo de amantes de la naturaleza y la vida en este maravilloso planeta",
     "about_text_1": "Estamos decididos a aportar nuestro granito de arena para frenar el cambio climático, el calentamiento global y tratar de minimizar la acción del hombre y nuestra civilización en la superficie de nuestro mundo.",

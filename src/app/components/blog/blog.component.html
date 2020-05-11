@@ -1,7 +1,7 @@
 <!-- start page-title-wrapper -->
 <section class="page-title-wrapper">
     <div class="page-title">
-        <h1>Recent articles</h1>
+        <h1>{{ 'sections.blog' | transloco }}</h1>
     </div>
     <div class="breadcrumb-wrapper">
         <div class="container">
@@ -19,194 +19,39 @@
 <section class="blog-page main-blog section-padding">
     <div class="container">
         <div class="row blog-grids">
-            <div class="col col-lg-4 col-xs-6">
+            <div *ngFor="let post of posts" class="col col-lg-4 col-xs-6">
                 <div class="grid">
                     <div class="entry-media">
                         <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-4.jpg"
+                            <img src="{{ post.images.image }}"
                                  alt
                                  class="img img-responsive">
                         </div>
                         <div class="tags">
                             <ul>
-                                <li><a href="#">Non-profit</a></li>
+                                <li><a href="#">{{ post.category.name }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="entry-body">
                         <div class="entry-title">
-                            <h3><a href="#">“Sale flower for charity” Finished successfully</a></h3>
+                            <h3><a href="#">{{ post.title }}</a></h3>
                         </div>
                         <div class="entry-meta">
                             <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
+                                <li><a href="#">{{ post.author.name }}</a></li>
+                                <li><a href="#">{{ post.created_on }}</a></li>
                             </ul>
                         </div>
                         <div class="continue">
-                            <a href="#">Continue reading..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xs-6">
-                <div class="grid">
-                    <div class="entry-media">
-                        <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-5.jpg"
-                                 alt
-                                 class="img img-responsive">
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Non-profit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="entry-body">
-                        <div class="entry-title">
-                            <h3><a href="#">“Sale flower for charity” Finished successfully</a></h3>
-                        </div>
-                        <div class="entry-meta">
-                            <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
-                            </ul>
-                        </div>
-                        <div class="continue">
-                            <a href="#">Continue reading..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xs-6">
-                <div class="grid">
-                    <div class="entry-media">
-                        <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-6.jpg"
-                                 alt
-                                 class="img img-responsive">
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Non-profit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="entry-body">
-                        <div class="entry-title">
-                            <h3><a href="#">“Sale flower for charity” Finished successfully</a></h3>
-                        </div>
-                        <div class="entry-meta">
-                            <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
-                            </ul>
-                        </div>
-                        <div class="continue">
-                            <a href="#">Continue reading..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xs-6">
-                <div class="grid">
-                    <div class="entry-media">
-                        <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-7.jpg"
-                                 alt
-                                 class="img img-responsive">
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Non-profit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="entry-body">
-                        <div class="entry-title">
-                            <h3><a href="#">“Sale flower for charity” Finished successfully</a></h3>
-                        </div>
-                        <div class="entry-meta">
-                            <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
-                            </ul>
-                        </div>
-                        <div class="continue">
-                            <a href="#">Continue reading..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xs-6">
-                <div class="grid">
-                    <div class="entry-media">
-                        <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-8.jpg"
-                                 alt
-                                 class="img img-responsive">
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Non-profit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="entry-body">
-                        <div class="entry-title">
-                            <h3><a href="#">“Sale flower for charity” Finished successfully</a></h3>
-                        </div>
-                        <div class="entry-meta">
-                            <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
-                            </ul>
-                        </div>
-                        <div class="continue">
-                            <a href="#">Continue reading..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xs-6">
-                <div class="grid">
-                    <div class="entry-media">
-                        <div class="img-holder">
-                            <img src="../../../assets/images/blog/img-1.jpg"
-                                 alt
-                                 class="img img-responsive">
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Non-profit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="entry-body">
-                        <div class="entry-title">
-                            <h3><a href="#">“Clean Central Park 2017” Finished successfully</a></h3>
-                        </div>
-                        <div class="entry-meta">
-                            <ul>
-                                <li><a href="#">Aaron ramsey</a></li>
-                                <li><a href="#">19 Feb, 2018</a></li>
-                            </ul>
-                        </div>
-                        <div class="continue">
-                            <a href="#">Continue reading..</a>
+                            <a href="#">{{ 'blog.keep_reading' | transloco }} </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div> <!-- end row -->
 
-        <div class="pagination-wrapper">
+        <div *ngIf="thereIsPagination" class="pagination-wrapper">
             <ul>
                 <li>
                     <a href="#"

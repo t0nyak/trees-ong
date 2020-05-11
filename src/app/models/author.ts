@@ -1,4 +1,4 @@
-export interface ShopCategory {
+export interface Author {
   uuid: string;
   name: string;
 }
