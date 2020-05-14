@@ -12,41 +12,42 @@ import { ProjectSingleComponent } from "./components/project-single/project-sing
 const routes: Routes = [
   {
     path: "about",
-    component: AboutComponent
+    component: AboutComponent,
   },
   {
     path: "home",
-    component: HomeComponent
+    component: HomeComponent,
+  },
+
+  {
+    path: "projects/:id",
+    component: ProjectSingleComponent,
   },
   {
     path: "projects",
-    component: ProjectsComponent
-  },
-  {
-    path: "projects/:id",
-    component: ProjectSingleComponent
+    component: ProjectsComponent,
   },
   {
     path: "shop",
-    component: ShopComponent
+    component: ShopComponent,
   },
   {
     path: "blog",
-    component: BlogComponent
+    component: BlogComponent,
   },
   {
     path: "transparency",
-    component: TransparencyComponent
+    component: TransparencyComponent,
   },
   {
     path: "**",
     pathMatch: "full",
-    redirectTo: "home"
-  }
+    redirectTo: "home",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

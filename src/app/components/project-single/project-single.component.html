@@ -23,37 +23,21 @@
                 <div class="col col-md-9">
                     <div class="causes-single">
                         <div class="img-holder">
-                            <img src="../../../assets/images/cause-single/img-1.jpg"
+                            <img src="https://www.elent.org:8118{{ (project$ | async)?.image }}"
                                  alt
                                  class="img img-responsive">
                         </div>
                         <div class="causes-list-box">
                             <div class="title">
-                                <h3>Fresh water for people</h3>
+                                <h3>{{ (project$ | async)?.title }}</h3>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-s1"
                                          data-percent="55"></div>
                                 </div>
-                                <h4>Raised: <span>$52,872</span> / $70,000</h4>
+                                <h4>Alcanzado: <span>{{ (project$ | async)?.got }} </span> / {{ (project$ | async)?.goal }} {{ (project$ | async)?.unit }}</h4>
                             </div>
                             <div class="inner-details">
-                                <p>Iste natus error sit voluptatem accusantium dolo remque laudantium. perspiciatis unde
-                                    omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                                    vitae
-                                    dicta sunt ex plicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                    odit
-                                    aut fugit, sed quia con se quuntur magni dolores eos qui ratione voluptatem sequi
-                                    nesciunt.</p>
-                                <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci
-                                    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-                                    aliquam quaerat voluptatem. Ut enim ad minima veniam</p>
-                                <ul>
-                                    <li><i class="fa fa-check"></i> Aspernatur aut odit aut fugit</li>
-                                    <li><i class="fa fa-check"></i> Nventore veritatis et quasi architecto</li>
-                                    <li><i class="fa fa-check"></i> Con se quuntur magni dolores</li>
-                                </ul>
+                                <p>{{ (project$ | async)?.description }}</p>
 
                                 <div class="donation-form quick-donation-section">
                                     <form action="#"

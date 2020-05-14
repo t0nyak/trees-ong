@@ -5,25 +5,31 @@
 #14.0	products-section
 --------------------------------------------------------------*/
 .shop-page .page-title {
-	@include background-style("../images/page-title/img-5.jpg", center center, cover, no-repeat, local);
+  @include background-style(
+    "../images/slider/slide-1.jpg",
+    center center,
+    cover,
+    no-repeat,
+    local
+  );
 }
 
 .shop-page .products-section {
-	background-color: $white;
+  background-color: $white;
 
-	.products-grids > .col {
-		margin-bottom: 35px;
-	}
+  .products-grids > .col {
+    margin-bottom: 35px;
+  }
 
-	.pagination-wrapper {
-		margin-top: 65px;
+  .pagination-wrapper {
+    margin-top: 65px;
 
-		@include media-query(991px) {
-			margin-top: 45px;
-		}
+    @include media-query(991px) {
+      margin-top: 45px;
+    }
 
-		@include media-query(767px) {
-			margin-top: 15px;
-		}
-	}
+    @include media-query(767px) {
+      margin-top: 15px;
+    }
+  }
 }

@@ -20,4 +20,10 @@ export class ProjectService {
       .get<Project[]>(`${environment.apiUrl}api/projects`)
       .toPromise();
   }
+
+  async getProject(uuid: string): Promise<Project> {
+    return await this.http
+      .get<Project>(`${environment.apiUrl}api/projects/${uuid}`)
+      .toPromise();
+  }
 }

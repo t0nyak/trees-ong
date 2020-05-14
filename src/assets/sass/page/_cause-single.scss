@@ -5,253 +5,254 @@
 #8.0	causes-single-wrapper
 --------------------------------------------------------------*/
 .cause-single-page .page-title {
-	@include background-style("../images/page-title/img-2.jpg", center center, cover, no-repeat, local);
+  @include background-style(
+    "../images/slider/slide-1.jpg",
+    center center,
+    cover,
+    no-repeat,
+    local
+  );
 }
 
 .cause-single-page .causes-single-wrapper {
+  .content > .col:first-child {
+    @include widther(1200px) {
+      padding-right: 70px;
+    }
+  }
 
-	.content > .col:first-child {
-		@include widther(1200px) {
-			padding-right: 70px;
-		}
-	}
+  .causes-single .title {
+    padding: 32px 0;
+  }
 
-	.causes-single .title {
-	    padding: 32px 0;
-	}
+  .causes-single h3 {
+    font-size: 42px;
+    font-size: calc-rem-value(42);
+    margin: 0 0 0.67em;
 
-	.causes-single h3 {
-		font-size: 42px;
-		font-size: calc-rem-value(42);
-		margin: 0 0 0.67em;
+    @include media-query(1199px) {
+      font-size: 35px;
+      font-size: calc-rem-value(35);
+    }
 
-		@include media-query(1199px) {
-			font-size: 35px;
-			font-size: calc-rem-value(35);
-		}
+    @include media-query(991px) {
+      font-size: 32px;
+      font-size: calc-rem-value(32);
+    }
 
-		@include media-query(991px) {
-			font-size: 32px;
-			font-size: calc-rem-value(32);
-		}
+    @include media-query(767px) {
+      font-size: 25px;
+      font-size: calc-rem-value(25);
+    }
+  }
 
-		@include media-query(767px) {
-			font-size: 25px;
-			font-size: calc-rem-value(25);
-		}
-	}
+  .causes-single h4 {
+    font-size: 24px;
+    font-size: calc-rem-value(24);
+    margin: 0 0 0.48em;
 
-	.causes-single h4 {
-		font-size: 24px;
-		font-size: calc-rem-value(24);
-		margin: 0 0 0.48em;
+    @include media-query(1199px) {
+      font-size: 18px;
+      font-size: calc-rem-value(18);
+    }
 
-		@include media-query(1199px) {
-			font-size: 18px;
-			font-size: calc-rem-value(18);
-		}
+    span {
+      color: $theme-primary-color;
+    }
+  }
 
-		span {
-			color: $theme-primary-color;
-		}
-	}
+  /*** progress bar ***/
+  .causes-single .progress {
+    background-color: $theme-secondary-color;
+    height: 12px;
+    margin-bottom: 20px;
+    overflow: visible;
+    @include rounded-border(0);
+    position: relative;
 
+    @include media-query(1199px) {
+      height: 10px;
+    }
 
-	/*** progress bar ***/
-	.causes-single .progress {
-		background-color: $theme-secondary-color;
-		height: 12px;
-		margin-bottom: 20px;
-		overflow: visible;
-		@include rounded-border(0);
-		position: relative;
+    @include media-query(767px) {
+      margin: 0 0 25px;
+    }
+  }
 
-		@include media-query(1199px) {
-			height: 10px;
-		}
+  .causes-single .progress-bar {
+    background-color: $theme-primary-color;
+    @include rounded-border(0);
+    position: relative;
+  }
 
-		@include media-query(767px) {
-			margin: 0 0 25px;
-		}
-	}
+  .causes-single .progress-bar:after {
+    content: "";
+    background-color: $white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    @include rounded-border();
+    @include round-box-shadow(lighten($black, 60%), 10px, 0);
 
-	.causes-single .progress-bar {
-		background-color: $theme-primary-color;
-		@include rounded-border(0);
-		position: relative;
-	}
+    @include media-query(1199px) {
+      width: 20px;
+      height: 20px;
+      top: -5px;
+    }
+  }
 
-	.causes-single .progress-bar:after {
-		content: "";
-		background-color: $white;
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		right: -10px;
-		top: -6px;
-		@include rounded-border();
-		@include round-box-shadow(lighten($black, 60%), 10px, 0);
+  .inner-details > p {
+    margin: 0 0 1.4em;
+  }
 
-		@include media-query(1199px) {
-			width: 20px;
-			height: 20px;
-			top: -5px;
-		}
-	}
+  .inner-details > ul {
+    margin-bottom: 50px;
+  }
 
-	.inner-details > p {
-		margin: 0 0 1.4em;
-	}
+  .inner-details > ul li {
+    color: $text-color;
+    margin-bottom: 0.5em;
 
-	.inner-details > ul {
-		margin-bottom: 50px;
-	}
+    i {
+      color: $theme-primary-color;
+    }
+  }
 
-	.inner-details > ul li {
-		color: $text-color;
-		margin-bottom: 0.5em;
+  .inner-details > ul li:last-child {
+    margin-bottom: 0;
+  }
 
-		i {
-			color: $theme-primary-color;
-		}
-	}
+  .quick-donation-section {
+    background-color: $white;
 
-	.inner-details > ul li:last-child {
-		margin-bottom: 0;
-	}
+    .form {
+      position: relative;
 
+      @include placeholder-style($white, 16, normal);
+    }
 
-	.quick-donation-section {
-		background-color: $white;
-		
-		.form {
-			position: relative;
+    .donate-list .box {
+      @include widther(1200px) {
+        width: 187px;
+        margin-right: 15px;
+      }
 
-			@include placeholder-style($white, 16, normal);
-		}
+      @include media-query(1199px) {
+        width: 163px;
+      }
 
-		.donate-list .box {
-			@include widther(1200px) {
-			    width: 187px;
-			    margin-right: 15px;
-			}
+      @include media-query(991px) {
+        width: 165px;
+      }
 
-			@include media-query(1199px) {
-			    width: 163px;
-			}
+      @include media-query(767px) {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        float: none;
+      }
+    }
 
-			@include media-query(991px) {
-			    width: 165px;
-			}
+    .enter-amount {
+      background-color: $theme-secondary-color;
+      width: 187px;
+      height: 50px;
+      line-height: 50px;
+      float: left;
+      background: #123a54;
+      margin-right: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include transition-time(0.3s);
 
-			@include media-query(767px) {
-			    width: 100%;
-			    height: 40px;
-			    line-height: 40px;
-			    float: none;
-			}
-		}
+      @include media-query(1199px) {
+        width: 163px;
+      }
 
-		.enter-amount {
-			background-color: $theme-secondary-color;
-			width: 187px;
-			height: 50px;
-			line-height: 50px;
-			float: left;
-			background: #123a54;
-			margin-right: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			@include transition-time(0.3s);
+      @include media-query(991px) {
+        width: 165px;
+        height: 45px;
+        line-height: 45px;
+      }
 
-			@include media-query(1199px) {
-			    width: 163px;
-			}
+      @include media-query(767px) {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        position: static;
+        margin-bottom: 15px;
+      }
+    }
 
-			@include media-query(991px) {
-			    width: 165px;
-			    height: 45px;
-			    line-height: 45px;
-			}
+    .enter-amount input {
+      background-color: $theme-secondary-color;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      font-size: calc-rem-value(16);
+      font-weight: 600;
+      color: $white;
+      padding: 10px 15px;
 
-			@include media-query(767px) {
-			    width: 100%;
-			    height: 40px;
-			    line-height: 40px;
-			    position: static;
-			    margin-bottom: 15px;
-			}
-		}
+      @include media-query(991px) {
+        font-size: 15px;
+        font-size: calc-rem-value(15);
+      }
+    }
 
-		.enter-amount input {
-			background-color: $theme-secondary-color;
-			width: 100%;
-			height: 100%;
-			font-size: 16px;
-			font-size: calc-rem-value(16);
-			font-weight: 600;
-			color: $white;
-			padding: 10px 15px;
+    .donate-btn {
+      margin-top: 25px;
 
-			@include media-query(991px) {
-				font-size: 15px;
-				font-size: calc-rem-value(15);
-			}
-		}
-
-		.donate-btn {
-			margin-top: 25px;
-
-			.btn {
-				width: 100%;
-			}
-		}
-	}
+      .btn {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /****related causes ****/
 .cause-single-page .related-causes {
-	background-color: $white;
+  background-color: $white;
 
-	.section-title {
-		text-align: left;
+  .section-title {
+    text-align: left;
 
-		h2 {
-			margin: 0;
-		}
-	}
+    h2 {
+      margin: 0;
+    }
+  }
 
-	.causes-s2-grids > .col {
+  .causes-s2-grids > .col {
+    @include media-query(1199px) {
+      margin-bottom: 35px;
+    }
 
-		@include media-query(1199px) {
-			margin-bottom: 35px;
-		}
+    @include media-query(620px) {
+      width: 100%;
+    }
+  }
 
-		@include media-query(620px) {
-			width: 100%;
-		}
-	}
-
-	.img-holder img {
-		@include media-query(620px) {
-			width: 100%;
-		}
-	}
+  .img-holder img {
+    @include media-query(620px) {
+      width: 100%;
+    }
+  }
 }
-
 
 /**** partners ****/
 .cause-single-page .partners {
-	@include media-query(1199px) {
-		padding-top: 75px;
-	}
+  @include media-query(1199px) {
+    padding-top: 75px;
+  }
 
-	@include media-query(991px) {
-		padding-top: 65px;
-	}
+  @include media-query(991px) {
+    padding-top: 65px;
+  }
 
-	@include media-query(767px) {
-		padding-top: 45px;
-	}
+  @include media-query(767px) {
+    padding-top: 45px;
+  }
 }
