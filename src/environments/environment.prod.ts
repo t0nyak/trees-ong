@@ -1,5 +1,5 @@
 export const environment = {
-  baseUrl: "http://www.elent.org",
-  apiUrl: "http://www.elent.org:8118/",
+  baseUrl: "https://www.elent.org",
+  apiUrl: "https://www.elent.org/api/",
   production: true,
 };
