@@ -23,7 +23,7 @@
                 <div class="col col-md-9">
                     <div class="causes-single">
                         <div class="img-holder">
-                            <img src="https://www.elent.org{{ (project$ | async)?.image }}"
+                            <img src="{{ (project$ | async)?.image }}"
                                  alt
                                  class="img img-responsive">
                         </div>
@@ -34,7 +34,8 @@
                                     <div class="progress-bar progress-bar-s1"
                                          data-percent="55"></div>
                                 </div>
-                                <h4>Alcanzado: <span>{{ (project$ | async)?.got }} </span> / {{ (project$ | async)?.goal }} {{ (project$ | async)?.unit }}</h4>
+                                <h4>Alcanzado: <span>{{ (project$ | async)?.got }} </span> /
+                                    {{ (project$ | async)?.goal }} {{ (project$ | async)?.unit }}</h4>
                             </div>
                             <div class="inner-details">
                                 <p>{{ (project$ | async)?.description }}</p>

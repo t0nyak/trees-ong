@@ -13,7 +13,7 @@
                  class="col col-md-4 col-xs-6">
                 <div class="grid">
                     <div class="img-holder">
-                        <img src="https://www.elent.org{{ project.image }}"
+                        <img src="{{ project.image }}"
                              alt
                              class="img img-responsive">
                     </div>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="causes-title">
-                        <h3><a href="" 
+                        <h3><a href=""
                                [routerLink]="['/projects/',project.uuid]">{{ project.title }}</a></h3>
                         <span class="remaining-days"><i
                                class="fi flaticon-calendar-page-with-circular-clock-symbol"></i>
@@ -42,7 +42,8 @@
                     </div>
                     <div class="causes-details">
                         <p>{{ project.description | summarize }}</p>
-                        <a href="" [routerLink]="['/projects/',project.uuid]"
+                        <a href=""
+                           [routerLink]="['/projects/',project.uuid]"
                            class="btn theme-btn-s3">Donar</a>
                     </div>
                 </div>
