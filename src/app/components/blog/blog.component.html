@@ -1,5 +1,5 @@
 <!-- start page-title-wrapper -->
-<section class="page-title-wrapper">
+<section class="blog-page page-title-wrapper">
     <div class="page-title">
         <h1>{{ 'sections.blog' | transloco }}</h1>
     </div>
@@ -19,7 +19,8 @@
 <section class="blog-page main-blog section-padding">
     <div class="container">
         <div class="row blog-grids">
-            <div *ngFor="let post of posts" class="col col-lg-4 col-xs-6">
+            <div *ngFor="let post of posts"
+                 class="col col-lg-4 col-xs-6">
                 <div class="grid">
                     <div class="entry-media">
                         <div class="img-holder">
@@ -51,7 +52,8 @@
             </div>
         </div> <!-- end row -->
 
-        <div *ngIf="thereIsPagination" class="pagination-wrapper">
+        <div *ngIf="thereIsPagination"
+             class="pagination-wrapper">
             <ul>
                 <li>
                     <a href="#"
