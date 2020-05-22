@@ -11,21 +11,18 @@ import { Observable } from "rxjs";
   styleUrls: ["./project-single.component.scss"],
 })
 export class ProjectSingleComponent implements OnInit {
-  project$: Observable<Project>;
+  project: Project;
+  isLoaded: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private projectService: ProjectService
   ) {}
 
-  ngOnInit() {
-    this.project$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        console.log(params);
-        return this.projectService.getProject(params.get("id"));
-      })
+  async ngOnInit() {
+    this.project = await this.projectService.getProject(
+      this.route.snapshot.params.id
     );
-
-    this.project$.subscribe((project) => console.log("project", project));
+    this.isLoaded = true;
   }
 }

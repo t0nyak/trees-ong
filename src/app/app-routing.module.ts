@@ -8,6 +8,7 @@ import { BlogComponent } from "./components/blog/blog.component";
 import { ShopComponent } from "./components/shop/shop.component";
 import { TransparencyComponent } from "./components/transparency/transparency.component";
 import { ProjectSingleComponent } from "./components/project-single/project-single.component";
+import { BlogSingleComponent } from "./components/blog-single/blog-single.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: "shop",
     component: ShopComponent,
+  },
+  {
+    path: "blog/:id",
+    component: BlogSingleComponent,
   },
   {
     path: "blog",

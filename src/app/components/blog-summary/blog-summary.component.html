@@ -11,7 +11,8 @@
         <div class="row">
             <div class="col col-xs-12">
                 <div class="blog-grids recent-blog-slider">
-                    <div *ngFor="let post of posts" class="grid-home col-xs-4">
+                    <div *ngFor="let post of posts"
+                         class="grid-home col-xs-4">
                         <div class="entry-media">
                             <div class="img-holder">
                                 <img src="{{ post.images.image }}"
@@ -26,7 +27,8 @@
                         </div>
                         <div class="entry-body">
                             <div class="entry-title">
-                                <h3><a href="#">{{ post.title }}</a></h3>
+                                <h3><a href=""
+                                       [routerLink]="['/blog/',post.uuid]">{{ post.title }}</a></h3>
                             </div>
                             <div class="entry-meta">
                                 <ul>
@@ -40,7 +42,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div> <!-- end row -->

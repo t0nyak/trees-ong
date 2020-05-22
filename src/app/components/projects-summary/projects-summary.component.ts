@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
 export class ProjectsSummaryComponent implements OnInit {
   projects: Project[];
 
-  constructor(private projectService: ProjectService, private router: Router) {}
+  constructor(private projectService: ProjectService) {}
 
   async ngOnInit() {
     this.projects = await this.projectService.getLastProjects();
@@ -19,8 +19,4 @@ export class ProjectsSummaryComponent implements OnInit {
       elem["percent"] = (elem.raised / elem.goal) * 100;
     });
   }
-
-  // getProjectDetail(uuid: string) {
-  //   this.router.navigate()
-  // }
 }

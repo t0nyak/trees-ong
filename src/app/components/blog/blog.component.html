@@ -30,13 +30,15 @@
                         </div>
                         <div class="tags">
                             <ul>
-                                <li><a href="#">{{ post.category.name }}</a></li>
+                                <li><a href=""
+                                       [routerLink]="['/blog/',post.uuid]">{{ post.category.name }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="entry-body">
                         <div class="entry-title">
-                            <h3><a href="#">{{ post.title }}</a></h3>
+                            <h3><a href=""
+                                   [routerLink]="['/blog/',post.uuid]">{{ post.title }}</a></h3>
                         </div>
                         <div class="entry-meta">
                             <ul>

@@ -29,6 +29,8 @@ import { TransparencyComponent } from "./components/transparency/transparency.co
 import { SummarizeTextPipe } from "./pipes/summarize-text.pipe";
 import { ProjectSingleComponent } from "./components/project-single/project-single.component";
 import { PriceRangeComponent } from "./components/shop/price-range/price-range.component";
+import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { BlogSingleComponent } from './components/blog-single/blog-single.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { PriceRangeComponent } from "./components/shop/price-range/price-range.c
     SummarizeTextPipe,
     ProjectSingleComponent,
     PriceRangeComponent,
+    BlogSingleComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,10 @@ import { PriceRangeComponent } from "./components/shop/price-range/price-range.c
         fallbackLang: "en",
         prodMode: environment.production,
       } as TranslocoConfig,
+    },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
     },
     translocoLoader,
     SummarizeTextPipe,

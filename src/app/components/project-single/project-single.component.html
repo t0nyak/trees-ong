@@ -17,28 +17,29 @@
 
 
     <!-- start causes -->
-    <section class="causes-single-wrapper section-padding">
+    <section *ngIf="isLoaded"
+             class="causes-single-wrapper section-padding">
         <div class="container">
             <div class="row content">
                 <div class="col col-md-9">
                     <div class="causes-single">
                         <div class="img-holder">
-                            <img src="{{ (project$ | async)?.image }}"
+                            <img src="{{ project.image }}"
                                  alt
                                  class="img img-responsive">
                         </div>
                         <div class="causes-list-box">
                             <div class="title">
-                                <h3>{{ (project$ | async)?.title }}</h3>
+                                <h3>{{ project.title }}</h3>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-s1"
                                          data-percent="55"></div>
                                 </div>
-                                <h4>Alcanzado: <span>{{ (project$ | async)?.got }} </span> /
-                                    {{ (project$ | async)?.goal }} {{ (project$ | async)?.unit }}</h4>
+                                <h4>Alcanzado: <span>{{ project.got }} </span> /
+                                    {{ project.goal }} {{ project.unit }}</h4>
                             </div>
                             <div class="inner-details">
-                                <p>{{ (project$ | async)?.description }}</p>
+                                <p>{{ project.description }}</p>
 
                                 <div class="donation-form quick-donation-section">
                                     <form action="#"
@@ -64,7 +65,7 @@
                                                        name="c1"
                                                        checked>
                                                 <label for="c3"><span class="check-icon"></span> <span
-                                                          class="amount">$500</span></label>
+                                                          class="amount">$50</span></label>
                                             </div>
                                         </div>
 
