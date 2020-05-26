@@ -1,4 +1,4 @@
-<div class="blog-detail-page">
+<div class="blog-details-page">
     <section *ngIf="isLoaded"
              class="page-title-wrapper">
         <div class="page-title">
@@ -30,14 +30,15 @@
                                  class="img img-responsive">
                         </div>
                         <div class="post-title-meta">
-                            <button class="btn">{{ post.category }}</button>
+                            <button class="btn">{{ post.category.name }}</button>
                             <h2>{{ post.title }}</h2>
                             <ul>
                                 <li><a href="#">{{ post.author.name }}</a></li>
                                 <li><a href="#">{{ post.created_on }}</a></li>
                             </ul>
                         </div>
-                        <div class="post-body">
+                        <div [innerHtml]="post.body"
+                             class="post-body">
                             <!--<p>It is a long established fact that a reader will be distracted by the readable content of
                                 a page when looking at its layout. The point of using Lorem Ipsum is that it has a
                                 more-or-less normal distribution of letters.</p>
@@ -46,7 +47,7 @@
                                 text. All the Lorem Ipsum genera tors on the Internet tend to repeat predefined chunks
                                 as necessary, making this the first true genera tor on the Internet. It uses a
                                 dictionary of over 200 Latin words, combined with a handful of model sentence </p>-->
-                            <p>{{ post.body }}</p>
+                            <!--<p>{{ post.body }}</p>-->
                         </div>
                         <div class="gallery-post">
                             <div class="gallery">
